@@ -516,4 +516,63 @@ body {
     .potential-analysis {
         margin: 2rem 1rem;
     }
+}
+
+.success-cases {
+    padding: 6rem 0;
+    background: #f8fafc;
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.case-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.case-card i {
+    font-size: 2.2rem;
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+.case-card h3 {
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 0.7rem;
+}
+
+.case-card p {
+    color: #64748b;
+    margin-bottom: 0.7rem;
+}
+
+.case-meta {
+    display: inline-block;
+    background: #e0e7ef;
+    color: #2563eb;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 0.5rem;
+}
+
+.case-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(37,99,235,0.08);
+}
+
+.cases-hope {
+    margin-top: 3rem;
+    text-align: center;
+    color: #2563eb;
+    font-size: 1.1rem;
 } 
