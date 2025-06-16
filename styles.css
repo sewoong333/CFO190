@@ -575,4 +575,17 @@ body {
     text-align: center;
     color: #2563eb;
     font-size: 1.1rem;
+}
+
+.case-img {
+    width: 100%;
+    max-width: 400px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0.7rem;
+    margin-bottom: 1rem;
+    background: #e0e7ef;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 } 
