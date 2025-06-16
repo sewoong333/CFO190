@@ -1,0 +1,12 @@
+{
+  "name": "cfo-service-landing",
+  "version": "1.0.0",
+  "description": "CFO Service Landing Page",
+  "private": true,
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+} 
