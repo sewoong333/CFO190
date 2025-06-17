@@ -267,51 +267,37 @@
                 <b>🔍 내 사업도 지원금 받을 수 있을까?</b><br/>
                 아래 진단을 통해 1분 만에 확인해보세요
             </div>
-            <form class="contact-form" id="contact-form">
+            <form class="contact-form" id="contact-form" method="POST" target="hidden_iframe">
                 <div class="form-group">
-                    <input type="text" name="company" placeholder="회사명" required>
+                    <input type="text" name="entry.1137692021" placeholder="회사명" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="name" placeholder="담당자명" required>
+                    <input type="text" name="entry.336425185" placeholder="담당자명" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" name="phone" placeholder="연락처" required>
+                    <input type="tel" name="entry.1008423230" placeholder="연락처" required>
                 </div>
                 <button type="submit" class="cta-button">무료 진단받기</button>
             </form>
+            <!-- 숨겨진 iframe -->
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
             <script>
             const form = document.getElementById("contact-form");
+            const iframe = document.getElementById("hidden_iframe");
             
-            form.addEventListener("submit", function(e) {
-                e.preventDefault(); // 기본 제출 막기
-                
-                // 사용자 입력값 가져오기
-                const company = form.company.value;
-                const name = form.name.value;
-                const phone = form.phone.value;
-                
-                // 구글 폼 URL
-                const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/formResponse";
-                const formData = new FormData();
-                
-                // 실제 구글폼 필드 ID 사용
-                formData.append("entry.1137692021", company);
-                formData.append("entry.336425185", name);
-                formData.append("entry.1008423230", phone);
-                
-                fetch(googleFormURL, {
-                    method: "POST",
-                    mode: "no-cors",
-                    body: formData
-                })
-                .then(() => {
+            // iframe이 로드되면 폼을 리셋하고 메시지를 표시
+            iframe.addEventListener('load', function() {
+                if (form.submitted) {
                     alert("상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.");
                     form.reset();
-                })
-                .catch((error) => {
-                    console.error("Error:", error);
-                    alert("오류가 발생했습니다. 다시 시도해주세요.");
-                });
+                    form.submitted = false;
+                }
+            });
+            
+            form.addEventListener("submit", function(e) {
+                // 구글 폼 제출 URL 설정
+                this.action = "https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/formResponse";
+                form.submitted = true;
             });
             </script>
             <div class="cta-footer">
