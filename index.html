@@ -177,7 +177,7 @@
             <h2>🌟 성공사례</h2>
             <div class="cases-grid">
                 <div class="case-card">
-                    <img src="https://res.cloudinary.com/datawxyxz/image/upload/v1750087245/case5_oxbgwa.png" alt="콘텐츠지원사업 협약서" class="case-img"/>
+                    <img src="https://res.cloudinary.com/datawxyxz/image/upload/v1750087245/case5_oxbgwa.png" alt="콘텐츠지원사업 협약서" class="case-img" id="case-img-main" style="cursor:pointer;"/>
                     <i class="fas fa-file-contract"></i>
                     <h3>콘텐츠지원사업, 5천만 원 지원금 수령</h3>
                     <p>책임자 최○○님이 콘텐츠지원사업에 도전, 5천만 원 지원금을 확보했습니다.</p>
@@ -185,6 +185,30 @@
                 </div>
             </div>
         </div>
+        <!-- 모달 구조 -->
+        <div id="img-modal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;">
+            <img id="img-modal-content" src="" alt="확대 이미지" style="max-width:90vw;max-height:90vh;border-radius:1rem;box-shadow:0 8px 32px rgba(0,0,0,0.5);"/>
+        </div>
+        <script>
+        // 이미지 클릭 시 모달 열기
+        document.addEventListener('DOMContentLoaded', function() {
+            var img = document.getElementById('case-img-main');
+            var modal = document.getElementById('img-modal');
+            var modalImg = document.getElementById('img-modal-content');
+            if(img && modal && modalImg) {
+                img.onclick = function() {
+                    modal.style.display = 'flex';
+                    modalImg.src = img.src;
+                };
+                modal.onclick = function(e) {
+                    if(e.target === modal) {
+                        modal.style.display = 'none';
+                        modalImg.src = '';
+                    }
+                };
+            }
+        });
+        </script>
     </section>
 
     <!-- CTA Section -->
