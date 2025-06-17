@@ -267,7 +267,7 @@
                 <b>🔍 내 사업도 지원금 받을 수 있을까?</b><br/>
                 아래 진단을 통해 1분 만에 확인해보세요
             </div>
-            <form class="contact-form" id="contact-form" onsubmit="return submitForm(this);">
+            <form class="contact-form" id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/formResponse" method="POST" target="hidden_iframe" onsubmit="return submitForm(this);">
                 <div class="form-group">
                     <input type="text" name="entry.1137692021" placeholder="회사명">
                 </div>
@@ -279,25 +279,15 @@
                 </div>
                 <button type="submit" class="cta-button">무료 진단받기</button>
             </form>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
             <script>
             function submitForm(form) {
-                const data = new FormData(form);
-                const action = 'https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/formResponse';
-                
-                const xhr = new XMLHttpRequest();
-                xhr.open('POST', action, true);
-                xhr.setRequestHeader('Accept', 'application/json');
-                
-                xhr.onloadend = function() {
+                document.getElementById('hidden_iframe').onload = function() {
                     alert('상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.');
                     form.reset();
                 };
-                
-                xhr.send(data);
-                
-                return false;
+                return true;
             }
-            </script>
             </script>
             <div class="cta-footer">
                 단순 컨설팅이 아닌 <strong>실행 중심 외주 CFO 서비스</strong><br/>
