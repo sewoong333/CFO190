@@ -47,10 +47,35 @@
                 <div class="potential-analysis">
                     <h3>내 회사의 잠재력 파악하기</h3>
                     <p>회사의 현재상태를 20초 만에 분석하여 누구보다 먼저 맞춤형 자금조달 정보를 확인해보세요.</p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/viewform" target="_blank" class="analysis-button">
-                        <i class="fas fa-search"></i>
-                        우리회사 잠재력 테스트
-                    </a>
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/formResponse" method="POST" target="_blank" class="analysis-form">
+                        <input type="hidden" name="entry.1137692021" id="company_name_top">
+                        <input type="hidden" name="entry.336425185" id="contact_name_top">
+                        <input type="hidden" name="entry.1008423230" id="contact_phone_top">
+                        <button type="submit" class="analysis-button">
+                            <i class="fas fa-search"></i>
+                            우리회사 잠재력 테스트
+                        </button>
+                    </form>
+                    <script>
+                    document.querySelector('.analysis-form').addEventListener('submit', function(e) {
+                        // 하단 폼의 값을 가져옴
+                        var companyName = document.querySelector('input[name="entry.1137692021"]').value;
+                        var contactName = document.querySelector('input[name="entry.336425185"]').value;
+                        var contactPhone = document.querySelector('input[name="entry.1008423230"]').value;
+                        
+                        // 값이 없으면 하단 폼으로 스크롤
+                        if (!companyName || !contactName || !contactPhone) {
+                            e.preventDefault();
+                            document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+                            return;
+                        }
+                        
+                        // 값이 있으면 hidden 필드에 설정
+                        document.getElementById('company_name_top').value = companyName;
+                        document.getElementById('contact_name_top').value = contactName;
+                        document.getElementById('contact_phone_top').value = contactPhone;
+                    });
+                    </script>
                 </div>
             </div>
         </div>
