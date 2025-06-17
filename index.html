@@ -242,24 +242,44 @@
                 <b>🔍 내 사업도 지원금 받을 수 있을까?</b><br/>
                 아래 진단을 통해 1분 만에 확인해보세요
             </div>
-            <form class="contact-form" action="https://docs.google.com/forms/d/e/1QDF1XWgZyTJbUsvp5eMJ_RKm_YPSctcLrxvrfhM62PA/formResponse" method="POST" target="_blank" id="contact-form">
+            <form class="contact-form" action="https://docs.google.com/forms/d/e/1QDF1XWgZyTJbUsvp5eMJ_RKm_YPSctcLrxvrfhM62PA/formResponse" method="POST" target="_blank" id="contact-form" onsubmit="return handleSubmit(event)">
                 <div class="form-group">
-                    <input type="text" name="entry.1234567890" placeholder="회사명" required>
+                    <input type="text" name="entry.1808207196" placeholder="회사명" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="entry.2345678901" placeholder="담당자명" required>
+                    <input type="text" name="entry.1663131167" placeholder="담당자명" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" name="entry.3456789012" placeholder="연락처" required>
+                    <input type="tel" name="entry.1819275928" placeholder="연락처" required>
                 </div>
-                <input type="hidden" name="entry.4567890123" id="submitDateTime">
+                <input type="hidden" name="entry.2071782719" id="submitDateTime">
                 <button type="submit" class="cta-button">무료 진단받기</button>
             </form>
             <script>
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                var now = new Date();
-                document.getElementById('submitDateTime').value = now.toISOString();
-            });
+            function handleSubmit(event) {
+                event.preventDefault();
+                
+                const form = document.getElementById('contact-form');
+                const formData = new FormData(form);
+                
+                // 현재 시간 추가
+                formData.append('entry.2071782719', new Date().toISOString());
+                
+                // Google Form에 데이터 제출
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors'
+                }).then(() => {
+                    alert('상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.');
+                    form.reset();
+                }).catch(error => {
+                    console.error('Error:', error);
+                    alert('신청 중 오류가 발생했습니다. 다시 시도해주세요.');
+                });
+
+                return false;
+            }
             </script>
             <div class="cta-footer">
                 단순 컨설팅이 아닌 <strong>실행 중심 외주 CFO 서비스</strong><br/>
