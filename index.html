@@ -267,42 +267,7 @@
                 <b>🔍 내 사업도 지원금 받을 수 있을까?</b><br/>
                 아래 진단을 통해 1분 만에 확인해보세요
             </div>
-            <form class="contact-form" id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/viewform" method="GET" target="_blank">
-                <div class="form-group">
-                    <input type="text" name="entry.1137692021" placeholder="회사명" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="entry.336425185" placeholder="담당자명" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" name="entry.1008423230" placeholder="연락처" required>
-                </div>
-                <button type="submit" class="cta-button" onclick="handleSubmit(event)">무료 진단받기</button>
-            </form>
-            <script>
-            function handleSubmit(event) {
-                // 폼이 유효한지 확인
-                const form = document.getElementById('contact-form');
-                if (!form.checkValidity()) {
-                    return;
-                }
-                
-                // 새 탭에서 폼 열기
-                const formData = new FormData(form);
-                const url = "https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/viewform?usp=dialog&" + 
-                          new URLSearchParams(formData).toString();
-                window.open(url, '_blank');
-                
-                // 완료 메시지 표시
-                setTimeout(() => {
-                    alert("상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.");
-                    form.reset();
-                }, 500);
-                
-                // 기본 제출 동작 막기
-                event.preventDefault();
-            }
-            </script>
+            <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/viewform?usp=dialog', '_blank')" class="cta-button">무료 진단받기</button>
             <div class="cta-footer">
                 단순 컨설팅이 아닌 <strong>실행 중심 외주 CFO 서비스</strong><br/>
                 성공사례가 아닌 <strong>당신 사업의 실행계획</strong>을 만듭니다.
