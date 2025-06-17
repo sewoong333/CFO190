@@ -244,15 +244,14 @@
             </div>
             <form class="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/formResponse" method="POST" target="_blank" id="contact-form" onsubmit="return handleSubmit(event)">
                 <div class="form-group">
-                    <input type="text" name="entry.1808207196" placeholder="회사명">
+                    <input type="text" name="entry.1137692021" placeholder="회사명">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="entry.1663131167" placeholder="담당자명" required>
+                    <input type="text" name="entry.336425185" placeholder="담당자명" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" name="entry.1819275928" placeholder="연락처" required>
+                    <input type="tel" name="entry.1008423230" placeholder="연락처" required>
                 </div>
-                <input type="hidden" name="entry.2071782719" id="submitDateTime">
                 <button type="submit" class="cta-button">무료 진단받기</button>
             </form>
             <script>
@@ -261,9 +260,6 @@
                 
                 const form = document.getElementById('contact-form');
                 const formData = new FormData(form);
-                
-                // 현재 시간 추가
-                formData.append('entry.2071782719', new Date().toISOString());
                 
                 // Google Form에 데이터 제출
                 fetch(form.action, {
