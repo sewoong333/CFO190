@@ -267,7 +267,7 @@
                 <b>🔍 내 사업도 지원금 받을 수 있을까?</b><br/>
                 아래 진단을 통해 1분 만에 확인해보세요
             </div>
-            <form class="contact-form" id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/formResponse" method="POST" target="formSubmitFrame">
+            <form class="contact-form" id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/viewform" method="GET" target="_blank">
                 <div class="form-group">
                     <input type="text" name="entry.1137692021" placeholder="회사명" required>
                 </div>
@@ -287,17 +287,15 @@
                     return;
                 }
                 
-                // 새 창에서 폼 제출
+                // 새 탭에서 폼 열기
                 const formData = new FormData(form);
-                const url = form.action + "?" + new URLSearchParams(formData).toString();
-                const submitWindow = window.open(url, 'formSubmitFrame', 'width=100,height=100');
+                const url = "https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/viewform?usp=dialog&" + 
+                          new URLSearchParams(formData).toString();
+                window.open(url, '_blank');
                 
-                // 0.5초 후에 알림 표시 및 창 닫기
+                // 완료 메시지 표시
                 setTimeout(() => {
                     alert("상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.");
-                    if (submitWindow) {
-                        submitWindow.close();
-                    }
                     form.reset();
                 }, 500);
                 
