@@ -242,18 +242,25 @@
                 <b>🔍 내 사업도 지원금 받을 수 있을까?</b><br/>
                 아래 진단을 통해 1분 만에 확인해보세요
             </div>
-            <form class="contact-form">
+            <form class="contact-form" action="https://docs.google.com/forms/d/e/1QDF1XWgZyTJbUsvp5eMJ_RKm_YPSctcLrxvrfhM62PA/formResponse" method="POST" target="_blank" id="contact-form">
                 <div class="form-group">
-                    <input type="text" placeholder="회사명" required>
+                    <input type="text" name="entry.1234567890" placeholder="회사명" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" placeholder="담당자명" required>
+                    <input type="text" name="entry.2345678901" placeholder="담당자명" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" placeholder="연락처" required>
+                    <input type="tel" name="entry.3456789012" placeholder="연락처" required>
                 </div>
+                <input type="hidden" name="entry.4567890123" id="submitDateTime">
                 <button type="submit" class="cta-button">무료 진단받기</button>
             </form>
+            <script>
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                var now = new Date();
+                document.getElementById('submitDateTime').value = now.toISOString();
+            });
+            </script>
             <div class="cta-footer">
                 단순 컨설팅이 아닌 <strong>실행 중심 외주 CFO 서비스</strong><br/>
                 성공사례가 아닌 <strong>당신 사업의 실행계획</strong>을 만듭니다.
