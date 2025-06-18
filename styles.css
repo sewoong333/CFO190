@@ -685,4 +685,22 @@ body {
         width: 100%;
         max-width: 300px;
     }
+}
+
+/* 플로팅 CTA 버튼 크기 50% 축소 */
+.floating-cta a {
+    padding: 7px 12px;
+    font-size: 0.85rem;
+}
+.floating-cta a i {
+    font-size: 1rem;
+}
+@media (max-width: 768px) {
+    .floating-cta a {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+    }
+    .floating-cta a i {
+        font-size: 0.9rem;
+    }
 } 
