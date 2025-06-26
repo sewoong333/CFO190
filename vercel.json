@@ -1,8 +1,5 @@
 {
   "version": 2,
-  "rewrites": [
-    { "source": "/:path*", "destination": "/챌린지/challenge.html" }
-  ],
   "github": {
     "enabled": true,
     "silent": true,
