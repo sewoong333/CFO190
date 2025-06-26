@@ -217,22 +217,56 @@ body {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
-.card i {
-    font-size: 2rem;
+.card img, .case-card img, .card table, .case-card table {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+    border-radius: 0.7rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.card table, .case-card table {
+    overflow-x: auto;
+    display: block;
+    width: 100%;
+    background: #fff;
+}
+
+.card, .case-card, .feature-item {
+    text-align: center;
+}
+
+.card i, .case-card i {
+    display: block;
+    margin: 0 auto 1rem auto;
+    font-size: 2.2rem;
+}
+
+.case-meta {
+    display: block;
+    margin: 1.2rem auto 0 auto;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
     color: #2563eb;
-    margin-bottom: 1rem;
+    background: #e0e7ff;
+    border-radius: 0.5rem;
+    width: fit-content;
+    min-width: 120px;
+    text-align: center;
 }
 
-.card h3 {
-    margin-bottom: 1rem;
-    color: #1e293b;
-    font-size: 1.25rem;
-    line-height: 1.5;
+.card, .case-card, .feature-item {
+    padding: 2.2rem 1.2rem;
+    margin-bottom: 2rem;
 }
 
-.card p {
-    color: #64748b;
-    line-height: 1.8;
+.card h3, .case-card h3 {
+    margin-bottom: 1.2rem;
+}
+
+.card p, .case-card p {
+    margin-bottom: 1.2rem;
 }
 
 /* Features Section */
@@ -491,19 +525,16 @@ body {
         padding: 1rem 1.5rem;
     }
     .card, .case-card, .feature-item {
-        padding: 1.2rem 0.5rem;
+        padding: 1rem 0.3rem;
+        font-size: 1rem;
     }
-    .cards-container,
-    .features-grid,
-    .cases-grid,
-    .process-timeline {
-        gap: 1.2rem;
-        margin-top: 2rem;
+    .case-meta {
+        font-size: 0.95rem;
+        min-width: 80px;
+        padding: 0.5rem 0.5rem;
     }
-    .case-img {
-        height: auto;
-        min-height: 120px;
-        max-height: 180px;
+    .card img, .case-card img, .card table, .case-card table {
+        margin-bottom: 0.7rem;
     }
 }
 
@@ -748,24 +779,6 @@ body {
 
 .card p, .feature-item p, .case-card p {
     line-height: 1.8;
-}
-
-/* --- 푸터 정보 보강 (SNS/이메일/전화 예시) --- */
-.footer-social {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.footer-social a {
-    color: #94a3b8;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-}
-
-.footer-social a:hover {
-    color: #fff;
 }
 
 /* === 여백 및 잘림 현상 개선 === */
