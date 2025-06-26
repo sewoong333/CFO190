@@ -15,7 +15,8 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
+    min-width: 0;
 }
 
 /* Navbar */
@@ -167,17 +168,22 @@ body {
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 4rem;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .card {
     background: #fff;
     border: 1px solid #e2e8f0;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 0;
+    word-break: keep-all;
+    box-sizing: border-box;
 }
 
 .card.highlight {
@@ -238,16 +244,21 @@ body {
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .feature-item {
     text-align: center;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 1.5rem;
     background: #fff;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    min-width: 0;
+    word-break: keep-all;
+    box-sizing: border-box;
 }
 
 .feature-item i {
@@ -277,10 +288,12 @@ body {
 .process-timeline {
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
-    margin-top: 4rem;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
     position: relative;
     padding: 0 1rem;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .process-step {
@@ -354,6 +367,9 @@ body {
     text-decoration: none;
     display: inline-block;
     border: none;
+    max-width: 100%;
+    white-space: normal;
+    word-break: keep-all;
 }
 
 .cta-button:hover {
@@ -460,18 +476,34 @@ body {
     }
 
     .container {
-        padding: 0 1rem;
+        padding: 0 0.7rem;
     }
 
     body, .card p, .feature-item p, .case-card p, .cta-box, .footer {
         font-size: 1.1rem;
     }
     .hero-content h1, .cta-box h2, .section-title {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
+        word-break: keep-all;
     }
     .cta-button {
         font-size: 1.1rem;
         padding: 1rem 1.5rem;
+    }
+    .card, .case-card, .feature-item {
+        padding: 1.2rem 0.5rem;
+    }
+    .cards-container,
+    .features-grid,
+    .cases-grid,
+    .process-timeline {
+        gap: 1.2rem;
+        margin-top: 2rem;
+    }
+    .case-img {
+        height: auto;
+        min-height: 120px;
+        max-height: 180px;
     }
 }
 
@@ -613,7 +645,10 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #e2e8f0;
     text-align: left;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 1.5rem;
+    min-width: 0;
+    word-break: keep-all;
+    box-sizing: border-box;
 }
 
 .case-card i {
@@ -662,6 +697,9 @@ body {
     border-radius: 1rem;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     transition: transform 0.2s;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .case-img:hover {
@@ -728,4 +766,16 @@ body {
 
 .footer-social a:hover {
     color: #fff;
+}
+
+/* === 여백 및 잘림 현상 개선 === */
+img, .case-img, .hero-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    word-break: keep-all;
+    overflow-wrap: break-word;
 } 
