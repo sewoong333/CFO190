@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://challenge-2025-new.vercel.app/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/ 

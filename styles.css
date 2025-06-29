@@ -423,11 +423,14 @@ body {
     color: #fff;
     padding: 1rem 1.5rem;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     border: none;
     max-width: 100%;
     white-space: normal;
     word-break: keep-all;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
 }
 
 .cta-button:hover {
