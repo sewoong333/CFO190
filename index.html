@@ -3,429 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>외주 CFO 서비스 - 자금 조달 대행 전문기관</title>
-    <meta property="og:title" content="외주 CFO 서비스 - 자금 조달 대행 전문기관">
-    <meta name="description" content="정부지원금, 자금조달, 외주 CFO 서비스 전문기관. 맞춤형 자금조달과 정부지원금 신청을 전문가가 함께합니다.">
-    <meta property="og:description" content="정부지원금, 자금조달, 외주 CFO 서비스 전문기관. 맞춤형 자금조달과 정부지원금 신청을 전문가가 함께합니다.">
+    <title>사업계획서 완성 챌린지 - 4주 만에 3천만~1억 원 자금조달</title>
+    <meta property="og:title" content="사업계획서 완성 챌린지 - 4주 만에 3천만~1억 원 자금조달">
+    <meta name="description" content="4주 만에 투자자를 사로잡는 사업계획서를 완성하고 자금조달에 성공하세요. 전문가 밀착 코칭으로 확실한 성과를 보장합니다.">
+    <meta property="og:description" content="4주 만에 투자자를 사로잡는 사업계획서를 완성하고 자금조달에 성공하세요. 전문가 밀착 코칭으로 확실한 성과를 보장합니다.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* 플로팅 버튼 스타일 */
-        .floating-cta {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .floating-cta a {
-            padding: 15px 25px;
-            border-radius: 30px;
-            background: #007bff;
+        /* 추가 스타일 */
+        .challenge-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            text-decoration: none;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .floating-cta .kakao-btn {
-            background: #FEE500;
-            color: #000;
-        }
-        .floating-cta .call-btn {
-            background: #28a745;
-        }
-        @media (max-width: 768px) {
-            .floating-cta {
-                bottom: 10px;
-                right: 10px;
-            }
-            .floating-cta a {
-                padding: 12px 20px;
-                font-size: 14px;
-            }
-        }
-        /* 신뢰도 지표 스타일 */
-        .trust-indicators {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 30px 0;
-            flex-wrap: wrap;
-        }
-        .trust-badge {
+            padding: 100px 0;
             text-align: center;
-            padding: 20px;
-            background: rgba(255,255,255,0.9);
-            border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
         }
-        .trust-badge img {
-            height: 50px;
-            margin-bottom: 10px;
+        .challenge-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .challenge-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .reward-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        .reward-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .reward-description {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+            color: #666;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        .reward-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .reward-card .reward-icon {
+            font-size: 4rem;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .reward-card h3 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .reward-card .reward-amount {
+            font-size: 1.5rem;
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .reward-card p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        .testimonials {
+            padding: 80px 0;
+            background: white;
+        }
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #007bff;
+        }
+        .testimonial-card .quote {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .testimonial-card .author {
+            font-weight: 600;
+            color: #007bff;
         }
     </style>
 </head>
 <body>
-    <!-- 플로팅 CTA 버튼 -->
-    <div class="floating-cta">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/viewform?usp=dialog" target="_blank" class="consult-btn">
-            <i class="fas fa-comments"></i> 무료상담받기
-        </a>
-        <a href="https://open.kakao.com/o/gd37l3Pc" target="_blank" class="kakao-btn">
-            <i class="fas fa-comment"></i> 카카오톡 상담
-        </a>
-        <a href="tel:010-3333-3506" class="call-btn">
-            <i class="fas fa-phone"></i> 전화 상담
-        </a>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Challenge Hero Section -->
+    <section class="challenge-hero">
         <div class="container">
-            <nav class="navbar">
-                <div class="logo"><a href="/" style="text-decoration: none; color: inherit;">CFO190</a></div>
-                <div class="nav-links">
-                    <a href="#service">서비스</a>
-                    <a href="#process">프로세스</a>
-                    <a href="#cases">성공사례</a>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/viewform?usp=dialog" target="_blank" class="cta-button">무료 상담받기</a>
+            <h1>자금이 필요하면 지금 당장 신청하세요.</h1>
+            <p class="subtitle">4주 후, 당신은 3천만~1억 원을 받고 있을 겁니다.</p>
+            <p>더 이상 고민할 시간이 없습니다. 경쟁자들이 이미 움직이고 있어요.</p>
+        </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section style="padding: 80px 0; background: white;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px; color: #333;">이런 분들을 위한 프로그램입니다</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="text-align: center; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+                    <i class="fas fa-rocket" style="font-size: 3rem; color: #007bff; margin-bottom: 20px;"></i>
+                    <h3>'내 사업'으로 탈출하고 싶은 예비 창업가!</h3>
                 </div>
-            </nav>
-            <div class="hero-content">
-                <h1>
-                    <span class="line1">성과 없는 자금조달 컨설팅?</span>
-                    <span class="line2">이젠 직접 실행해드립니다</span>
-                </h1>
-                <p class="subtitle">
-                    입만 털고 끝나는 컨설팅은 그만.<br/>
-                    <strong>정부지원금 신청까지 같이 해주는 외주 CFO 서비스</strong>를 경험해보세요.
-                </p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">87%</span>
-                        <span class="stat-label">지원금 획득률</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">36+</span>
-                        <span class="stat-label">누적 고객사</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">336억+</span>
-                        <span class="stat-label">누적 지원금</span>
-                    </div>
+                <div style="text-align: center; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+                    <i class="fas fa-money-bill-wave" style="font-size: 3rem; color: #007bff; margin-bottom: 20px;"></i>
+                    <h3>종잣돈이 없어 막막한 초기 스타트업 대표님!</h3>
                 </div>
-                <div class="potential-analysis">
-                    <h3>내 회사의 잠재력 파악하기</h3>
-                    <p>회사의 현재상태를 20초 만에 분석하여 누구보다 먼저 맞춤형 자금조달 정보를 확인해보세요.</p>
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/formResponse" method="POST" target="_blank" class="analysis-form">
-                        <input type="hidden" name="entry.1137692021" id="company_name_top">
-                        <input type="hidden" name="entry.336425185" id="contact_name_top">
-                        <input type="hidden" name="entry.1008423230" id="contact_phone_top">
-                        <button type="submit" class="analysis-button">
-                            <i class="fas fa-search"></i>
-                            우리회사 잠재력 테스트
-                        </button>
-                    </form>
-                    <script>
-                    document.querySelector('.analysis-form').addEventListener('submit', function(e) {
-                        // 하단 폼의 값을 가져옴
-                        var companyName = document.querySelector('input[name="entry.1137692021"]').value;
-                        var contactName = document.querySelector('input[name="entry.336425185"]').value;
-                        var contactPhone = document.querySelector('input[name="entry.1008423230"]').value;
-                        
-                        // 값이 없으면 하단 폼으로 스크롤
-                        if (!companyName || !contactName || !contactPhone) {
-                            e.preventDefault();
-                            document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-                            return;
-                        }
-                        
-                        // 값이 있으면 hidden 필드에 설정
-                        document.getElementById('company_name_top').value = companyName;
-                        document.getElementById('contact_name_top').value = contactName;
-                        document.getElementById('contact_phone_top').value = contactPhone;
-                    });
-                    </script>
+                <div style="text-align: center; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+                    <i class="fas fa-file-alt" style="font-size: 3rem; color: #007bff; margin-bottom: 20px;"></i>
+                    <h3>매번 사업계획서 때문에 고배를 마셨던 분!</h3>
                 </div>
-                <!-- 신뢰도 지표 추가 -->
-                <div class="trust-indicators">
-                    <div class="trust-badge">
-                        <img src="https://res.cloudinary.com/datawxyxz/image/upload/v1750129147/badge-mss_kxfpqd.png" alt="중소벤처기업부 인증">
-                        <p>중기부 공식 등록 컨설팅사</p>
-                    </div>
-                    <div class="trust-badge">
-                        <img src="https://res.cloudinary.com/datawxyxz/image/upload/v1750129147/badge-kibo_lmn2xq.png" alt="기보 인증">
-                        <p>기술보증기금 협약기관</p>
-                    </div>
-                    <div class="trust-badge">
-                        <img src="https://res.cloudinary.com/datawxyxz/image/upload/v1750129147/badge-kosmes_pqwxrt.png" alt="코스메스 인증">
-                        <p>신용보증기금 협약기관</p>
-                    </div>
+                <div style="text-align: center; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+                    <i class="fas fa-handshake" style="font-size: 3rem; color: #007bff; margin-bottom: 20px;"></i>
+                    <h3>'실전' 밀착 코칭이 절실한 분!</h3>
+                </div>
+                <div style="text-align: center; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+                    <i class="fas fa-fire" style="font-size: 3rem; color: #007bff; margin-bottom: 20px;"></i>
+                    <h3>한 달 만에 확실한 성과를 내고 싶은 열정가!</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pain Points Section -->
-    <section id="pain-points" class="pain-points">
+    <!-- Pain Points -->
+    <section style="padding: 80px 0; background: #f8f9fa;">
         <div class="container">
-            <h2>❌ 이런 경험 없으신가요?</h2>
-            <div class="cards-container">
-                <div class="card">
-                    <i class="fas fa-times-circle"></i>
-                    <h3>컨설팅만 받고, 지원금은 못 받음</h3>
-                    <p>많은 기업들이 컨설팅만 받고 실제 지원금은 받지 못하는 경우가 많습니다.</p>
+            <h2 style="text-align: center; margin-bottom: 50px; color: #333;">이런 고민 있으시죠?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="text-align: center; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <i class="fas fa-question-circle" style="font-size: 3rem; color: #dc3545; margin-bottom: 20px;"></i>
+                    <h3>뭘 어떻게 시작해야 할지 캄캄해요!</h3>
                 </div>
-                <div class="card">
-                    <i class="fas fa-file-alt"></i>
-                    <h3>사업계획서만 받고 나머진 다 셀프</h3>
-                    <p>사업계획서만 받고 나머지 신청 과정은 스스로 해야 하는 번거로움.</p>
+                <div style="text-align: center; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <i class="fas fa-star" style="font-size: 3rem; color: #dc3545; margin-bottom: 20px;"></i>
+                    <h3>초기 자금 조달은 하늘의 별 따기 같아요!</h3>
                 </div>
-                <div class="card">
-                    <i class="fas fa-question-circle"></i>
-                    <h3>신청하라는데 막막해서 포기함</h3>
-                    <p>복잡한 신청 절차와 준비 서류로 인해 포기하는 경우가 많습니다.</p>
+                <div style="text-align: center; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <i class="fas fa-eye-slash" style="font-size: 3rem; color: #dc3545; margin-bottom: 20px;"></i>
+                    <h3>투자자들은 거들떠보지도 않아요!</h3>
                 </div>
-                <div class="card">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <h3>잘못된 정보로 지원금 탈락</h3>
-                    <p>부정확한 정보와 전략으로 인해 지원금 신청이 탈락되는 경우가 많습니다.</p>
+                <div style="text-align: center; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: #dc3545; margin-bottom: 20px;"></i>
+                    <h3>이걸 글로 설명하려니 답답해요!</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Difference Section -->
-    <section id="service" class="our-difference">
+    <!-- Solution -->
+    <section style="padding: 80px 0; background: white;">
         <div class="container">
-            <h2>👊 그래서, 우리가 다르게 합니다</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>맞춤형 자금조달 로드맵 수립</h3>
-                    <p>기업의 특성과 비전에 맞는 최적의 자금조달 로드맵을 제시합니다.</p>
+            <h2 style="text-align: center; margin-bottom: 50px; color: #333;">극강의 실전 프로그램으로 해결합니다</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div style="padding: 30px; background: #f8f9fa; border-radius: 15px;">
+                    <i class="fas fa-target" style="font-size: 3rem; color: #28a745; margin-bottom: 20px;"></i>
+                    <h3>결과를 '만들어내는' 극강의 실전 프로그램</h3>
+                    <p>전문가들이 투자 심사역의 심장을 관통할 사업계획서를 4주 만에 완성시켜 드립니다.</p>
                 </div>
-                <div class="feature-item">
-                    <i class="fas fa-check-circle"></i>
-                    <h3>정부지원금 대상 여부 진단</h3>
-                    <p>전문가가 직접 기업 상황을 분석하여 지원 가능한 사업을 찾아드립니다.</p>
+                <div style="padding: 30px; background: #f8f9fa; border-radius: 15px;">
+                    <i class="fas fa-users" style="font-size: 3rem; color: #28a745; margin-bottom: 20px;"></i>
+                    <h3>오프라인 그룹 코스</h3>
+                    <p>멘토들이 바로 옆에서 실시간으로 작성을 도와줍니다. 막히는 부분은 즉시 해결됩니다.</p>
                 </div>
-                <div class="feature-item">
-                    <i class="fas fa-file-signature"></i>
-                    <h3>사업계획서 / 신청서 함께 작성</h3>
-                    <p>전문가가 함께 작성하여 승인 가능성을 최대화합니다.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-handshake"></i>
-                    <h3>실제 신청까지 함께 진행</h3>
-                    <p>신청부터 승인까지 모든 과정을 함께 진행합니다.</p>
+                <div style="padding: 30px; background: #f8f9fa; border-radius: 15px;">
+                    <i class="fas fa-bullseye" style="font-size: 3rem; color: #28a745; margin-bottom: 20px;"></i>
+                    <h3>핵심만 압축</h3>
+                    <p>사업의 본질부터 자금 조달, IR 피칭까지, 투자자가 진정으로 원하는 핵심만을 압축했습니다.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section id="process" class="process">
+    <!-- 수정된 리워드 섹션 -->
+    <section class="reward-section">
         <div class="container">
-            <h2>📋 진행 프로세스</h2>
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <h3>무료 상담</h3>
-                    <p>전문가와 1:1 상담을 통해 지원 가능성을 확인합니다.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <h3>맞춤 전략 수립</h3>
-                    <p>기업 상황에 맞는 최적의 지원금 전략을 수립합니다.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <h3>서류 작성</h3>
-                    <p>전문가가 직접 사업계획서와 신청서를 작성합니다.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <h3>신청 및 승인</h3>
-                    <p>신청부터 승인까지 모든 과정을 책임지고 진행합니다.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Success Cases Section -->
-    <section id="cases" class="success-cases">
-        <div class="container">
-            <h2>🌟 성공사례</h2>
-            <div class="cases-grid">
-                <div class="case-card">
-                    <img src="https://res.cloudinary.com/datawxyxz/image/upload/v1750129147/case1_e8hvbd.jpg" alt="남부캠퍼스 공간지원 협약서" class="case-img case-img-modal" data-img="https://res.cloudinary.com/datawxyxz/image/upload/v1750129147/case1_e8hvbd.jpg" style="cursor:pointer;"/>
-                    <i class="fas fa-users"></i>
-                    <h3>예비창업자 5명, 남부캠퍼스 입주 성공</h3>
-                    <p>백○진, 천○이 등 다양한 예비창업자들이 남부캠퍼스 협약을 통해 창업 공간을 확보했습니다. 입주 지원부터 멘토링까지 종합적인 지원을 받게 되었습니다.</p>
-                    <span class="case-meta">창업좌석: 5석</span>
-                </div>
-                <div class="case-card">
-                    <img src="https://res.cloudinary.com/datawxyxz/image/upload/v1750087245/case2_omfubf.png" alt="콘텐츠지원사업 협약서" class="case-img case-img-modal" data-img="https://res.cloudinary.com/datawxyxz/image/upload/v1750087245/case2_omfubf.png" style="cursor:pointer;"/>
+            <h2>🌟 확실한 보상!</h2>
+            <p class="reward-description">
+                실제로 수많은 참가자들이 이 챌린지를 통해 완성된 사업계획서로 정부 지원 사업에 선정되고, 
+                성공적으로 자금조달에 성공하여 꿈에 그리던 사업을 시작했습니다. 당신의 열정에 확실한 보상을 약속합니다!
+            </p>
+            
+            <div class="reward-card">
+                <div class="reward-icon">
                     <i class="fas fa-trophy"></i>
-                    <h3>콘텐츠지원사업, 5천만 원 지원금 수령</h3>
-                    <p>콘텐츠지원사업에 도전하여 차별화된 콘텐츠 기획과 실행력으로 5천만 원의 지원금을 확보했습니다.</p>
-                    <span class="case-meta">지원금: 50,000,000원</span>
                 </div>
-                <div class="case-card">
-                    <img src="https://res.cloudinary.com/datawxyxz/image/upload/v1750087245/case3_e4oiw8.png" alt="콘텐츠 개발 지원 협약서" class="case-img case-img-modal" data-img="https://res.cloudinary.com/datawxyxz/image/upload/v1750087245/case3_e4oiw8.png" style="cursor:pointer;"/>
-                    <i class="fas fa-desktop"></i>
-                    <h3>사운드 콘텐츠 개발 지원사업 선정</h3>
-                    <p>2021년 뉴콘텐츠센터의 사운드 콘텐츠 개발 지원사업에 선정되어 혁신적인 오디오 콘텐츠 제작 프로젝트를 시작했습니다. 차별화된 기획력과 기술력을 인정받아 5천만 원의 지원금을 확보했습니다.</p>
-                    <span class="case-meta">지원금: 50,000,000원</span>
-                </div>
-                <div class="case-card">
-                    <img src="https://res.cloudinary.com/datawxyxz/image/upload/v1750087245/case4_pednhs.png" alt="창업성공패키지 사업화지원 협약서" class="case-img case-img-modal" data-img="https://res.cloudinary.com/datawxyxz/image/upload/v1750087245/case4_pednhs.png" style="cursor:pointer;"/>
-                    <i class="fas fa-robot"></i>
-                    <h3>인공지능 솔루션 개발사업 7천만 원 확보</h3>
-                    <p>2021년 창업성공패키지 사업화지원에 선정되어 혁신적인 인공지능 솔루션 개발을 시작했습니다. 기술성과 사업성을 모두 인정받아 7천만 원의 사업비를 지원받게 되었습니다.</p>
-                    <span class="case-meta">사업비: 70,000,000원</span>
-                </div>
-                <div class="case-card">
-                    <img src="https://res.cloudinary.com/datawxyxz/image/upload/v1750087245/case5_oxbgwa.png" alt="사업화지원사업 협약서" class="case-img case-img-modal" data-img="https://res.cloudinary.com/datawxyxz/image/upload/v1750087245/case5_oxbgwa.png" style="cursor:pointer;"/>
-                    <i class="fas fa-rocket"></i>
-                    <h3>혁신 기술 사업화지원사업 1억 원 확보</h3>
-                    <p>혁신적인 기술력과 시장성을 인정받아 사업화지원사업에 선정되었습니다. 체계적인 사업계획과 기술 검증을 통해 1억 5백만 원의 사업화 자금을 확보하는데 성공했습니다.</p>
-                    <span class="case-meta">사업비: 105,285,715원</span>
-                </div>
-                <div class="case-card">
-                    <img src="https://res.cloudinary.com/datawxyxz/image/upload/v1750087245/case6_u78ikp.png" alt="ICT 제작지원사업 협약서" class="case-img case-img-modal" data-img="https://res.cloudinary.com/datawxyxz/image/upload/v1750087245/case6_u78ikp.png" style="cursor:pointer;"/>
-                    <i class="fas fa-microchip"></i>
-                    <h3>ICT 제작지원사업 2억 7천만 원 확보</h3>
-                    <p>2020년 ICT 제작지원사업에 선정되어 혁신적인 솔루션 개발 프로젝트를 시작했습니다. 기술성과 사업성을 높이 평가받아 총 2억 7천만 원의 대규모 사업비를 지원받게 되었습니다.</p>
-                    <span class="case-meta">사업비: 270,000,000원</span>
-                </div>
-                <div class="case-card">
-                    <img src="https://res.cloudinary.com/datawxyxz/image/upload/v1750087246/case7_xf8ryl.png" alt="문화기술 연구개발 협약서" class="case-img case-img-modal" data-img="https://res.cloudinary.com/datawxyxz/image/upload/v1750087246/case7_xf8ryl.png" style="cursor:pointer;"/>
-                    <i class="fas fa-vr-cardboard"></i>
-                    <h3>문화기술 연구개발 3억 7천5백만 원 수주</h3>
-                    <p>문화기술 연구개발 사업에 선정되어 첨단 문화콘텐츠 기술 개발을 시작했습니다. 혁신적인 기술력과 연구개발 역량을 인정받아 3억 7천5백만 원의 대규모 연구개발비를 확보했습니다.</p>
-                    <span class="case-meta">사업비: 375,000,000원</span>
-                </div>
-                <div class="case-card">
-                    <img src="https://res.cloudinary.com/datawxyxz/image/upload/v1750158033/case8_galkqm.png" alt="지역주력산업육성사업 협약서" class="case-img case-img-modal" data-img="https://res.cloudinary.com/datawxyxz/image/upload/v1750158033/case8_galkqm.png" style="cursor:pointer;"/>
-                    <i class="fas fa-industry"></i>
-                    <h3>지역주력산업육성 컨소시엄 16억 원 수주</h3>
-                    <p>지역주력산업육성사업 컨소시엄의 주관기관으로 선정되어 대규모 산업육성 프로젝트를 시작했습니다. 산학연 협력을 통한 혁신적인 사업계획으로 16억 원의 대형 프로젝트를 수주했습니다.</p>
-                    <span class="case-meta">사업비: 1,600,000,000원</span>
-                </div>
-            </div>
-        </div>
-        <!-- 모달 구조 -->
-        <div id="img-modal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;">
-            <img id="img-modal-content" src="" alt="확대 이미지" style="max-width:90vw;max-height:90vh;border-radius:1rem;box-shadow:0 8px 32px rgba(0,0,0,0.5);"/>
-        </div>
-        <script>
-        // 여러 이미지 클릭 시 모달 열기
-        document.addEventListener('DOMContentLoaded', function() {
-            var imgs = document.querySelectorAll('.case-img-modal');
-            var modal = document.getElementById('img-modal');
-            var modalImg = document.getElementById('img-modal-content');
-            imgs.forEach(function(img) {
-                img.onclick = function() {
-                    modal.style.display = 'flex';
-                    modalImg.src = img.getAttribute('data-img');
-                };
-            });
-            if(modal && modalImg) {
-                modal.onclick = function(e) {
-                    if(e.target === modal) {
-                        modal.style.display = 'none';
-                        modalImg.src = '';
-                    }
-                };
-            }
-        });
-        </script>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="contact" class="cta">
-        <div class="container">
-            <h2>🎯 지금 바로 무료 진단 시작하기</h2>
-            <div class="cta-box">
-                <b>🔍 내 사업도 지원금 받을 수 있을까?</b><br/>
-                아래 진단을 통해 1분 만에 확인해보세요
-            </div>
-            <div style="text-align: center;">
-                <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdXeLLz-VKim9lwwIzpdQELAygUYB94CrKH_4PtbPu5mVbHyQ/viewform?usp=dialog', '_blank')" class="cta-button">무료상담받기</button>
-            </div>
-            <div class="cta-footer">
-                단순 컨설팅이 아닌 <strong>실행 중심 외주 CFO 서비스</strong><br/>
-                성공사례가 아닌 <strong>당신 사업의 실행계획</strong>을 만듭니다.
+                <h3>2천만원 이상 사업비 지급되는 지원사업 합격시</h3>
+                <div class="reward-amount">참가비 전액 리워드로 지급합니다</div>
+                <p>
+                    정부지원사업이나 민간투자를 통해 2천만원 이상의 사업비를 확보하신 경우, 
+                    참가비 전액을 리워드로 돌려드립니다. 실질적인 성과에 대한 확실한 보상을 약속합니다.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section 추가 -->
-    <section id="faq" class="faq">
+    <!-- Testimonials -->
+    <section class="testimonials">
         <div class="container">
-            <h2>자주 묻는 질문</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>Q. 어떤 기업이 정부지원금을 받을 수 있나요?</h3>
-                    <p>중소기업, 벤처기업, 예비창업자 등 대부분의 기업이 받을 수 있습니다. 업종과 기업 상황에 따라 맞춤형 지원사업을 찾아드립니다.</p>
+            <h2>✨ 참가자 후기</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="quote">"창업 첫해, 사업계획서 작성이 막막했는데 챌린지에서 멘토님들과 함께 실전 피드백을 받으며 완성했습니다. 그 결과 사무실까지 지원받았고, 투자유치 기회도 얻었습니다. 혼자였다면 절대 불가능했을 성공입니다!"</p>
+                    <p class="author">- 참가자 A</p>
                 </div>
-                <div class="faq-item">
-                    <h3>Q. 상담은 무료인가요?</h3>
-                    <p>네, 초기 상담은 완전 무료입니다. 전문가와 1:1로 기업 현황을 파악하고 가능한 지원사업을 안내해드립니다.</p>
+                <div class="testimonial-card">
+                    <p class="quote">"투자자 관점에서 사업을 재구성하는 법을 배웠고, 실제로 1억 시드 투자를 유치했습니다. 멘토님들이 투자자처럼 날카롭게 피드백해주셔서 사업계획서가 완전히 달라졌어요. 진짜 실전형 프로그램입니다!"</p>
+                    <p class="author">- 참가자 B</p>
                 </div>
-                <div class="faq-item">
-                    <h3>Q. 성공 수수료는 어떻게 되나요?</h3>
-                    <p>지원금 획득 후에만 수수료가 발생하며, 사업 규모와 내용에 따라 차등 적용됩니다. 상담 시 상세히 안내해드립니다.</p>
+                <div class="testimonial-card">
+                    <p class="quote">"막연했던 아이디어가 챌린지 덕분에 명확한 비즈니스 모델로 정리됐고, 실행계획까지 세울 수 있었습니다. 그 결과 매출이 1년 만에 3배 성장! 실전에서 바로 써먹을 수 있는 최고의 과정입니다."</p>
+                    <p class="author">- 참가자 C</p>
                 </div>
-                <div class="faq-item">
-                    <h3>Q. 소요 기간은 얼마나 되나요?</h3>
-                    <p>지원사업별로 다르지만, 일반적으로 신청부터 선정까지 1-3개월 정도 소요됩니다. 사업 계획 수립부터 신청까지 전 과정을 도와드립니다.</p>
+                <div class="testimonial-card">
+                    <p class="quote">"정부지원사업 신청이 너무 복잡해서 늘 포기했는데, 챌린지에서 단계별로 코칭받으며 서류를 완성했습니다. 결국 7천만 원 지원금을 받고, 사업을 본격적으로 확장할 수 있었습니다!"</p>
+                    <p class="author">- 참가자 D</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"사업계획서만 수십 번 떨어졌는데, 챌린지에서 멘토님과 1:1로 코칭받으며 완전히 새로 썼습니다. 결국 1억이 넘는 지원금을 받아 공장 자동화에 성공했습니다. 진심으로 추천합니다!"</p>
+                    <p class="author">- 참가자 E</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"사업계획서 챌린지 덕분에 16억 지원사업에 선정! 멘토님들의 꼼꼼한 피드백과 실전 중심 코칭이 아니었다면 불가능했을 결과입니다. 진심으로 감사드립니다."</p>
+                    <p class="author">- 참가자 F</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 실시간 상담 가능 시간 표시 -->
-    <section class="contact-hours">
+    <!-- 참가비용 및 코스안내 -->
+    <section style="padding: 80px 0; background: #f8f9fa;">
         <div class="container">
-            <div class="contact-hours-content">
-                <h3>📞 상담 가능 시간</h3>
-                <p>평일 오전 9시 - 오후 6시</p>
-                <p>점심시간 오후 12시 - 1시</p>
-                <p class="highlight">지금 바로 상담 신청하시면 <br>전문가가 빠른 시간 내에 연락드립니다.</p>
+            <h2 style="text-align: center; margin-bottom: 50px; color: #333; font-size: 2.5rem;">📋 참가비용 및 코스안내</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+                
+                <!-- 기존 온,오프라인 그룹 코스 -->
+                <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; position: relative;">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #28a745; color: white; padding: 10px 20px; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">강력 추천!</div>
+                    <i class="fas fa-users" style="font-size: 3.5rem; color: #28a745; margin-bottom: 25px;"></i>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #333;">온, 오프라인 그룹 코스</h3>
+                    <div style="font-size: 2.2rem; font-weight: 700; color: #28a745; margin-bottom: 20px;">총 33만 원</div>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
+                        <p style="color: #666; font-size: 1rem; line-height: 1.6; margin: 0;"><strong>특징:</strong> 현장에서 멘토와 함께 즉시 완성하는 가장 확실한 방법. 그룹 시너지를 통해 최고의 결과물을 만듭니다.</p>
+                    </div>
+                    <ul style="text-align: left; color: #666; line-height: 1.8; margin-bottom: 30px; padding-left: 20px;">
+                        <li>4주간 집중 코칭 (주 1회 4시간)</li>
+                        <li>실시간 멘토 피드백</li>
+                        <li>그룹 내 피어 리뷰</li>
+                        <li>온라인 추가 지원</li>
+                        <li>완성된 사업계획서 보장</li>
+                    </ul>
+                </div>
+
+                <!-- 새로운 사업아이템 발굴 그룹 코스 -->
+                <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; position: relative;">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #007bff; color: white; padding: 10px 20px; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">아이템 발굴</div>
+                    <i class="fas fa-lightbulb" style="font-size: 3.5rem; color: #007bff; margin-bottom: 25px;"></i>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #333;">사업아이템 발굴 그룹 코스</h3>
+                    <div style="font-size: 2.2rem; font-weight: 700; color: #007bff; margin-bottom: 20px;">총 55만 원</div>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
+                        <p style="color: #666; font-size: 1rem; line-height: 1.6; margin: 0;"><strong>특징:</strong> 사업 아이디어부터 발굴하는 완전체 코스. 시장 분석부터 비즈니스 모델 설계까지 전 과정을 함께합니다.</p>
+                    </div>
+                    <ul style="text-align: left; color: #666; line-height: 1.8; margin-bottom: 30px; padding-left: 20px;">
+                        <li>6주간 집중 코칭 (주 1회 4시간)</li>
+                        <li>아이템 발굴 워크샵</li>
+                        <li>시장조사 및 경쟁분석 지원</li>
+                        <li>비즈니스 모델 설계</li>
+                        <li>완성된 사업계획서 + 아이템</li>
+                    </ul>
+                </div>
+
+                <!-- 기존 1:1 맞춤형 코칭 코스 -->
+                <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; position: relative;">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #ffc107; color: #333; padding: 10px 20px; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">프리미엄</div>
+                    <i class="fas fa-user-tie" style="font-size: 3.5rem; color: #ffc107; margin-bottom: 25px;"></i>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #333;">1:1 맞춤형 코칭 코스</h3>
+                    <div style="font-size: 2.2rem; font-weight: 700; color: #ffc107; margin-bottom: 20px;">총 198만 원</div>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
+                        <p style="color: #666; font-size: 1rem; line-height: 1.6; margin: 0;"><strong>특징:</strong> 당신의 사업에 완전히 최적화된 개별 맞춤 가이드를 제공합니다.</p>
+                    </div>
+                    <ul style="text-align: left; color: #666; line-height: 1.8; margin-bottom: 30px; padding-left: 20px;">
+                        <li>완전 개별 맞춤 코칭</li>
+                        <li>언제든 질문 가능</li>
+                        <li>전문가 네트워크 연결</li>
+                        <li>투자유치 직접 연결</li>
+                        <li>사후 멘토링 6개월</li>
+                    </ul>
+                </div>
+
             </div>
+
+            <!-- 공통 안내사항 -->
+            <div style="margin-top: 50px; text-align: center; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <h4 style="color: #333; margin-bottom: 15px;">📌 공통 안내사항</h4>
+                <p style="color: #666; line-height: 1.6; margin: 0;">
+                    • 모든 코스는 완성된 사업계획서를 보장합니다<br>
+                    • 정부지원사업 2천만원 이상 합격시 참가비 전액 리워드<br>
+                    • 준비물: 노트북, 열정, 그리고 성공에 대한 의지
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding: 80px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">지금 바로 신청하세요!</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">7월 7일 시작하는 기수는 7월 6일까지 신청받습니다.</p>
+            <p style="font-size: 1.1rem; margin-bottom: 40px; opacity: 0.9;">자가진단 후 준비 단계별로 개인별 맞춤 코칭으로 사업계획서 돌입합니다. 준비물은 노트북 한 대입니다.</p>
+            <a href="https://open.kakao.com/o/gd37l3Pc" target="_blank" style="display: inline-block; background: #fff; color: #667eea; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1.1rem; margin-top: 20px;">지금 신청하기</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer style="background: #333; color: white; padding: 40px 0; text-align: center;">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>CFO190</h3>
-                    <p>자금 조달 대행 전문기관</p>
-                </div>
-                <div class="footer-contact">
-                    <p>📞 02-1234-5678</p>
-                    <p>✉️ contact@cfo190.com</p>
-                </div>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 springwater. All rights reserved.</p>
-            </div>
+            <h3>CFO190 - 사업계획서 완성 챌린지</h3>
+            <p style="margin: 20px 0; opacity: 0.8;">4주 만에 투자자를 사로잡는 사업계획서 완성</p>
+            <p style="opacity: 0.6;">&copy; 2025 springwater. All rights reserved.</p>
         </div>
     </footer>
 </body>
-</html> 
+</html>
