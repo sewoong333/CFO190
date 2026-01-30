@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맞춤 지원사업 분석 결과 - CFO190</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .analysis-results {
+            padding: 4rem 0;
+        }
+
+        .result-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .result-header h2 {
+            color: #1e293b;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .result-header p {
+            color: #64748b;
+        }
+
+        .support-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-card {
+            background: #fff;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .category-card h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-card h3 i {
+            color: #2563eb;
+        }
+
+        .support-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .support-item {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .support-item:last-child {
+            border-bottom: none;
+        }
+
+        .support-info h4 {
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .support-info p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .support-amount {
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .cta-section .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">CFO190</div>
+        <div class="nav-links">
+            <a href="index.html">홈으로</a>
+            <a href="#contact" class="cta-button">무료 상담받기</a>
+        </div>
+    </nav>
+
+    <section class="analysis-results">
+        <div class="container">
+            <div class="result-header">
+                <h2>맞춤 지원사업 분석 결과</h2>
+                <p>회사 상황에 맞는 최적의 지원사업을 찾았습니다.</p>
+            </div>
+
+            <div class="support-categories">
+                <div class="category-card">
+                    <h3><i class="fas fa-gift"></i> 정부지원금</h3>
+                    <ul class="support-list">
+                        <li class="support-item">
+                            <div class="support-info">
+                                <h4>중소기업 기술혁신 지원사업</h4>
+                                <p>신기술 개발 및 상용화 지원</p>
+                            </div>
+                            <span class="support-amount">최대 5억원</span>
+                        </li>
+                        <li class="support-item">
+                            <div class="support-info">
+                                <h4>스마트제조혁신 지원사업</h4>
+                                <p>스마트팩토리 구축 지원</p>
+                            </div>
+                            <span class="support-amount">최대 3억원</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <h3><i class="fas fa-hand-holding-usd"></i> 투자유치</h3>
+                    <ul class="support-list">
+                        <li class="support-item">
+                            <div class="support-info">
+                                <h4>벤처캐피탈 투자연계</h4>
+                                <p>성장단계 기업 투자 지원</p>
+                            </div>
+                            <span class="support-amount">최대 20억원</span>
+                        </li>
+                        <li class="support-item">
+                            <div class="support-info">
+                                <h4>엔젤투자 연계</h4>
+                                <p>초기 스타트업 투자 지원</p>
+                            </div>
+                            <span class="support-amount">최대 5억원</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <h3><i class="fas fa-landmark"></i> 융자지원</h3>
+                    <ul class="support-list">
+                        <li class="support-item">
+                            <div class="support-info">
+                                <h4>중소기업 성장자금 융자</h4>
+                                <p>저리 융자 지원</p>
+                            </div>
+                            <span class="support-amount">최대 30억원</span>
+                        </li>
+                        <li class="support-item">
+                            <div class="support-info">
+                                <h4>기술보증기금 보증</h4>
+                                <p>신용보증 지원</p>
+                            </div>
+                            <span class="support-amount">최대 50억원</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <a href="#contact" class="cta-button">
+                    <i class="fas fa-phone-alt"></i>
+                    전문가와 상담하기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>CFO190</h3>
+                    <p>정부지원금 신청 대행 전문</p>
+                </div>
+                <div class="footer-contact">
+                    <p>📞 02-1234-5678</p>
+                    <p>✉️ contact@cfo190.com</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CFO190. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
